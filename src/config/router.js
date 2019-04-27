@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import TaskListPage from '../pages/TaskList'
 import RegisterPage from '../pages/Register'
 import ConfirmationPage from '../pages/Confirmation'
 import LoginPage from '../pages/Login'

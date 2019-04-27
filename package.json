@@ -1,9 +1,9 @@
 {
-  "name": "task-app-frontend",
-  "description": "A Vue.js project",
+  "name": "standup-web",
   "version": "1.0.0",
-  "author": "Connor Leech <connor@stitchlabs.com>",
-  "license": "MIT",
+  "description": "Ejercicio Coding Dojo - Idukay - 2019/04/27",
+  "author": "Mauricio Endara",
+  "license": "ISC",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",

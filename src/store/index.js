@@ -36,15 +36,6 @@ export const store = new Vuex.Store({
     },
     remove_room(state, rooms) {
       state.rooms.splice(index, 1);
-    },
-    SET_TASKS(state, tasks) {
-      state.tasks = tasks;
-    },
-    ADD_TASK(state, task) {
-      state.tasks.unshift(task);
-    },
-    REMOVE_TASK(state, index) {
-      state.tasks.splice(index, 1);
     }
   },
   actions: {
@@ -97,24 +88,6 @@ export const store = new Vuex.Store({
           commit('remove_room', index);
         });
     },
-    async getTaskList({ commit }) {
-      axios.get('/api/tasks')
-        .then((response) => {
-          commit('SET_TASKS', response.data);
-        });
-    },
-    async addTask({ commit }, newTask) {
-      axios.post('/api/tasks', newTask)
-        .then((response) => {
-          commit('ADD_TASK', _.get(response.data, 'task'));
-        });
-    },
-    async removeTask({ commit }, { taskId, index }) {
-      axios.delete(`/api/tasks/${taskId}`)
-        .then(() => {
-          commit('REMOVE_TASK', index);
-        });
-    }
   },
   getters: {
     isLoggedIn: state => !!state.token,
